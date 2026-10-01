@@ -1,91 +1,602 @@
+/* =========================
+   GENERAL
+========================= */
+
 * {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f8fafc;
-    color: #1e293b;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Skip Link */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7fbf8;
+    color: #17251d;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   SKIP LINK
+========================= */
+
 .skip-link {
     position: absolute;
     left: -9999px;
     top: 10px;
+    background: #ffd166;
+    color: #14532d;
+    padding: 10px 16px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .skip-link:focus {
-    left: 10px;
-    background-color: white;
-    color: #1e293b;
-    padding: 10px;
-    z-index: 1000;
+    left: 15px;
 }
 
-/* Navigation */
+
+/* =========================
+   HEADER + NAVIGATION
+========================= */
+
+header {
+    background: #14532d;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
 nav {
-    background-color: #334155;
-    padding: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
-nav ul {
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+}
+
+.nav-links li {
     margin: 0;
     padding: 0;
 }
 
-nav a {
+.nav-links a {
+    display: block;
+
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
+
+    padding: 10px 18px;
+    border-radius: 10px;
+
+    font-weight: bold;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
 }
 
-nav a:hover {
-    background-color: white;
-    color: #334155;
+.nav-links a:hover {
+    background: #f59e0b;
+    color: #14532d;
+    transform: translateY(-2px);
 }
 
-/* Main */
+.nav-links a.active {
+    background: #ffd166;
+    color: #14532d;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
 main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px;
-}
-
-/* Images */
-img {
     width: 100%;
-    max-width: 400px;
-    border: 3px solid #334155;
-    padding: 8px;
-    border-radius: 15px;
-    transition: 0.3s;
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 30px;
 }
 
-img:hover {
-    transform: scale(1.05);
-}
 
-/* Grid */
-.gallery {
+/* =========================
+   HERO
+========================= */
+
+.hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+
+    gap: 40px;
+    align-items: center;
+
+    margin-bottom: 60px;
 }
 
-/* nth-child */
-.gallery img:nth-child(even) {
-    border-radius: 30px;
+.hero-text {
+    min-width: 0;
 }
 
-.gallery img:nth-child(odd) {
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    color: #14532d;
+    margin: 15px 0 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 25px;
+    border: 5px solid white;
+    padding: 5px;
+
+    box-shadow: 0 10px 30px rgba(20, 83, 45, 0.15);
+}
+
+
+/* =========================
+   TAG
+========================= */
+
+.tag {
+    display: inline-block;
+
+    color: #14532d;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    background: #14532d;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 12px 22px;
     border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #f59e0b;
+    color: #14532d;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.intro h2 {
+    color: #14532d;
+    font-size: 35px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    margin-bottom: 35px;
+}
+
+.page-header h1 {
+    color: #14532d;
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 10px 0 20px;
+
+    overflow-wrap: break-word;
+}
+
+.page-header p {
+    font-size: 19px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.place-card {
+    background: white;
+
+    border: 1px solid #d7e6dc;
+    border-radius: 25px;
+
+    padding: 20px;
+
+    min-width: 0;
+
+    box-shadow: 0 10px 30px rgba(20, 83, 45, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(20, 83, 45, 0.15);
+}
+
+.place-card img {
+    width: 100%;
+
+    border: 4px solid white;
+    padding: 5px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
+}
+
+.place-card:hover img {
+    transform: scale(1.03);
+}
+
+.place-card h2,
+.place-card h3 {
+    color: #14532d;
+    margin-top: 18px;
+    overflow-wrap: break-word;
+}
+
+.place-card p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+.gallery .place-card {
+    min-width: 0;
+}
+
+
+/* =========================
+   NTH CHILD
+========================= */
+
+.place-card:nth-child(even) img {
+    border-radius: 20px 40px 20px 40px;
+}
+
+.place-card:nth-child(odd) img {
+    border-radius: 40px 20px 40px 20px;
+}
+
+
+/* =========================
+   ACTIVITY FEATURE
+========================= */
+
+/*
+   Đây là phần quan trọng nhất để sửa
+   lỗi "Try Vietnamese Food" bị tràn.
+*/
+
+.activity-feature {
+    display: grid;
+
+    /*
+       2 phần cho ảnh
+       1 phần cho nội dung
+    */
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+
+    gap: 40px;
+
+    align-items: center;
+
+    width: 100%;
+    max-width: 100%;
+
+    background: white;
+
+    border: 1px solid #d7e6dc;
+    border-radius: 30px;
+
+    padding: 35px;
+
+    margin-bottom: 45px;
+
+    box-shadow: 0 10px 30px rgba(20, 83, 45, 0.08);
+}
+
+.activity-feature > div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.activity-feature img {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 20px;
+
+    border: 4px solid white;
+    padding: 5px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activity-text {
+    min-width: 0;
+    width: 100%;
+}
+
+.activity-text h2 {
+    color: #14532d;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    overflow-wrap: anywhere;
+}
+
+.activity-text p {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+    background: #ffd166;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.quote p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #14532d;
+}
+
+
+/* =========================
+   TRAVEL TIPS
+========================= */
+
+.tips {
+    background: white;
+
+    border: 1px solid #d7e6dc;
+    border-radius: 25px;
+
+    padding: 30px;
+
+    margin-top: 45px;
+}
+
+.tips h2 {
+    color: #14532d;
+}
+
+.tips li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #14532d;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .activity-feature {
+        grid-template-columns: minmax(0, 1fr) minmax(250px, 1fr);
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .activity-text h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 650px) {
+
+    nav {
+        padding: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /*
+       Trên điện thoại:
+       ảnh ở trên
+       chữ ở dưới
+    */
+    .activity-feature {
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+
+        gap: 25px;
+    }
+
+    .activity-text h2 {
+        font-size: 30px;
+    }
+
+    .activity-text p {
+        font-size: 16px;
+    }
 }

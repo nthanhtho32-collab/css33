@@ -1,41 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places in Vietnam</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Discover beautiful places to visit in Vietnam.">
+    <title>Vietnam Travel | Places</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<a href="#main-content" class="skip-link">
-    Skip to Main Content
-</a>
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="places.html">Places</a></li>
-        <li><a href="activities.html">Activities</a></li>
-    </ul>
-</nav>
 
-<main id="main-content">
+    <header class="site-header">
 
-    <h1>Beautiful Places in Vietnam</h1>
+        <nav aria-label="Main navigation">
 
-    <div class="gallery">
+            <div class="nav-inner">
 
-        <img src="images/halong.jpg" alt="Ha Long Bay" style="width: 400px; height: 300px;">
-        <img src="images/hoian.jpg" alt="Hoi An Ancient Town" style="width: 400px; height: 300px;">
-        <img src="images/danang.jpg" alt="Da Nang city" style="width: 400px; height: 300px;">
-        <img src="images/sapa.jpg" alt="Sapa mountains" style="width: 400px; height: 300px;">
-        <img src="images/phuquoc.jpg" alt="Phu Quoc beach" style="width: 400px; height: 300px;">
+                <a class="brand" href="index.html">
+                    Vietnam<span>Travel</span>
+                </a>
 
-    </div>
+                <ul class="nav-links">
 
-</main>
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="places.html">
+                            Places
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="activities.html">
+                            Activities
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main id="main-content">
+
+        <section class="page-heading">
+
+            <p class="eyebrow">
+                EXPLORE THE COUNTRY
+            </p>
+
+            <h1>
+                Beautiful Places in Vietnam
+            </h1>
+
+            <p>
+                Each destination has a different atmosphere,
+                from peaceful mountain villages to lively coastal
+                cities and historic streets.
+            </p>
+
+        </section>
+
+
+        <section class="gallery" aria-label="Vietnam destinations">
+
+
+            <!-- Ha Long Bay -->
+            <article class="place-card">
+
+                <img
+                    src="images/halong.jpg"
+                    alt="Ha Long Bay with limestone islands"
+                >
+
+                <div class="place-info">
+
+                    <span>QUANG NINH</span>
+
+                    <h2>
+                        Ha Long Bay
+                    </h2>
+
+                    <p>
+                        Famous for emerald water and dramatic
+                        limestone islands rising from the sea.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Hoi An -->
+            <article class="place-card">
+
+                <img
+                    src="images/hoian.jpg"
+                    alt="Hoi An Ancient Town with traditional buildings"
+                >
+
+                <div class="place-info">
+
+                    <span>QUANG NAM</span>
+
+                    <h2>
+                        Hoi An
+                    </h2>
+
+                    <p>
+                        A charming historic town known for colorful
+                        streets, lanterns, and old architecture.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Da Nang -->
+            <article class="place-card">
+
+                <img
+                    src="images/danang.jpg"
+                    alt="Da Nang city and coastline"
+                >
+
+                <div class="place-info">
+
+                    <span>CENTRAL VIETNAM</span>
+
+                    <h2>
+                        Da Nang
+                    </h2>
+
+                    <p>
+                        A modern coastal city with beautiful beaches,
+                        mountains, and a relaxed atmosphere.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Sa Pa -->
+            <article class="place-card">
+
+                <img
+                    src="images/sapa.jpg"
+                    alt="Sapa mountains and green rice terraces"
+                >
+
+                <div class="place-info">
+
+                    <span>LAO CAI</span>
+
+                    <h2>
+                        Sa Pa
+                    </h2>
+
+                    <p>
+                        A mountain destination surrounded by valleys,
+                        rice terraces, and spectacular views.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Phu Quoc -->
+            <article class="place-card">
+
+                <img
+                    src="images/phuquoc.jpg"
+                    alt="Phu Quoc tropical beach"
+                >
+
+                <div class="place-info">
+
+                    <span>KIEN GIANG</span>
+
+                    <h2>
+                        Phu Quoc
+                    </h2>
+
+                    <p>
+                        A tropical island destination with clear water,
+                        beaches, and beautiful sunsets.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <section class="tips-section">
+
+            <div>
+
+                <p class="eyebrow">
+                    TRAVEL TIP
+                </p>
+
+                <h2>
+                    Choose a destination that matches your mood.
+                </h2>
+
+            </div>
+
+
+            <div class="tip-list">
+
+                <p>
+                    <strong>Want nature?</strong>
+                    Try Sa Pa or Ha Long Bay.
+                </p>
+
+                <p>
+                    <strong>Love history?</strong>
+                    Spend time exploring Hoi An.
+                </p>
+
+                <p>
+                    <strong>Prefer the beach?</strong>
+                    Visit Da Nang or Phu Quoc.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Vietnam Travel &copy; 2026 |
+            Explore. Experience. Remember.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
